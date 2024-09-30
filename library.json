@@ -1,0 +1,18 @@
+{
+  "name": "mROS2-PlatformIO",
+  "version": "0.0.1",
+  "description": "mROS 2: yet another runtime environment onto embedded devices",
+  "keywords": "ROS",
+  "authors":
+  [
+    {
+      "name": "Koichiro Yokoyama",
+      "email": "32591276+realteck-ky@users.noreply.github.com",
+      "maintainer": true
+    }
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/mROS-base/mros2/blob/main/README.md",
+  "frameworks": "*",
+  "platforms": "*"
+}
