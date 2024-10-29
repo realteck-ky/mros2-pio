@@ -11,7 +11,7 @@
 	do                                                                   \
 	{                                                                    \
 		uint32_t _tick = osKernelGetTickCount();                           \
-		printf("%s : %08u.%03u : ", #flg, (_tick / 1000), (_tick % 1000)); \
+		printf("%s : %08u.%03u : ", #flg, (unsigned int)(_tick / 1000), (unsigned int)(_tick % 1000)); \
 		printf(__VA_ARGS__);                                               \
 		printf("\n");                                                      \
 	} while (0)

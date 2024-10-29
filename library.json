@@ -1,18 +1,45 @@
 {
-  "name": "mROS2-PlatformIO",
-  "version": "0.0.1",
-  "description": "mROS 2: yet another runtime environment onto embedded devices",
-  "keywords": "ROS",
-  "authors":
-  [
-    {
-      "name": "Koichiro Yokoyama",
-      "email": "32591276+realteck-ky@users.noreply.github.com",
-      "maintainer": true
+    "name": "mros2-pio",
+    "version": "0.0.1",
+    "description": "mROS 2: yet another runtime environment onto embedded devices",
+    "keywords": "ROS",
+    "authors": [
+        {
+            "name": "Koichiro Yokoyama",
+            "email": "32591276+realteck-ky@users.noreply.github.com",
+            "maintainer": true
+        }
+    ],
+    "license": "Apache-2.0",
+    "homepage": "https://github.com/mROS-base/mros2/blob/main/README.md",
+    "frameworks": "espidf",
+    "platforms": "espressif32",
+    "headers": [
+        "mros2/include/mros2.h", "mros2_msgs"
+    ],
+    "build": {
+        "extraScript": "generate_header.py",
+        "includeDir": ".",
+        "flags": [
+            "-I mros2/include",
+            "-I mros2/include/mros2",
+            "-I mros2/mros2_msgs",
+            "-I mros2/embeddedRTPS/include",
+            "-I mros2/embeddedRTPS/thirdparty/lwip",
+            "-I mros2/embeddedRTPS/thirdparty/Micro-CDR/include",
+            "-I platform/${PIOPLATFORM}",
+            "-I platform/${PIOPLATFORM}/rtps",
+            "-I platform/${PIOPLATFORM}/wifi",
+            "-I cmsis/${PIOPLATFORM}/include",
+            "-I generate",
+            "-Wno-error=format",
+            "-Wno-error=parentheses"
+        ],
+        "srcDir": ".",
+        "srcFilter": [
+            "+<mros2/**/*.c*>",
+            "+<cmsis/${PIOPLATFORM}/**/*.c*>",
+            "+<platform/${PIOPLATFORM}/**/*.c*>"
+        ]
     }
-  ],
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/mROS-base/mros2/blob/main/README.md",
-  "frameworks": "*",
-  "platforms": "*"
 }
