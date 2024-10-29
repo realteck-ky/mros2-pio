@@ -1,6 +1,7 @@
-# mROS2 for PlatformIO
+# mROS 2 for PlatformIO
 
-This is mROS 2 library for PlatformIO.
+This is [mROS 2](https://github.com/mROS-base/mros2) library for PlatformIO.
+
 [mROS 2](https://github.com/mROS-base/mros2) is yet another runtime environment onto embedded devices.
 
 ## Supported boards
@@ -13,7 +14,7 @@ TODO:
 > Most programs of mROS 2 for ESP-IDF are based on the following repositories: [mros2-esp32](https://github.com/mROS-base/mros2-esp32).  
 > This version is only checked for building, so it is not confirmed to run.  
 
-## Quick Start
+## Quick start
 
 Create a PlatformIO project, and add this repository URL to the `lib_deps` like following.
 
