@@ -18,7 +18,7 @@
         "mros2/include/mros2.h", "mros2_msgs"
     ],
     "build": {
-        "extraScript": "generate_header.py",
+        "extraScript": "extra_script.py",
         "includeDir": ".",
         "flags": [
             "-I mros2/include",
