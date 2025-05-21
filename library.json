@@ -20,26 +20,11 @@
     "build": {
         "extraScript": "extra_script.py",
         "includeDir": ".",
-        "flags": [
-            "-I mros2/include",
-            "-I mros2/include/mros2",
-            "-I mros2/mros2_msgs",
-            "-I mros2/embeddedRTPS/include",
-            "-I mros2/embeddedRTPS/thirdparty/lwip",
-            "-I mros2/embeddedRTPS/thirdparty/Micro-CDR/include",
-            "-I platform/${PIOPLATFORM}",
-            "-I platform/${PIOPLATFORM}/rtps",
-            "-I platform/${PIOPLATFORM}/wifi",
-            "-I cmsis/${PIOPLATFORM}/include",
-            "-I generate",
-            "-Wno-error=format",
-            "-Wno-error=parentheses"
-        ],
         "srcDir": ".",
-        "srcFilter": [
-            "+<mros2/**/*.c*>",
-            "+<cmsis/${PIOPLATFORM}/**/*.c*>",
-            "+<platform/${PIOPLATFORM}/**/*.c*>"
+        "flags": [
+            "-Wno-format",
+            "-Wno-parentheses",
+            "-Wunused-variable"
         ]
     }
 }

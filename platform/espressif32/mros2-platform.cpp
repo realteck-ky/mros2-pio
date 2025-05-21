@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-/* NOTE: 
+/* NOTE:
  *   this file has not been implemented and used yet
  */
 
